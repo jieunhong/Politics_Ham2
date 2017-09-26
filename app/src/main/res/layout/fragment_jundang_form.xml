@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="115dp"
+    android:background="@color/colorBackground"
+    tools:context=".Fragment.JundangFormFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    -
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/write_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/var1"
+            android:text="정당 만들기"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="35dp"
+            android:text="한줄이념"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorTextMake"
+            android:textSize="25dp"
+            android:layout_below="@+id/just_name"
+            android:layout_alignLeft="@+id/textView7"
+            android:layout_alignStart="@+id/textView7" />
+
+        <EditText
+            android:id="@+id/just_idea"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="25dp"
+            android:ems="8"
+            style="@style/EditTextStyle"
+            android:textColor="@color/colorText"
+            android:layout_alignTop="@+id/textView5"
+            android:layout_alignLeft="@+id/just_name"
+            android:layout_alignStart="@+id/just_name" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="정당이름"
+            android:textColor="@color/colorTextMake"
+            android:textSize="25dp"
+            android:gravity="center_vertical"
+            android:layout_above="@+id/textView5"
+            android:layout_alignLeft="@+id/hashtags2"
+            android:layout_alignStart="@+id/hashtags2"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp" />
+
+        <EditText
+            android:id="@+id/just_name"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:ems="8"
+            android:textSize="25dp"
+            style="@style/EditTextStyle"
+            android:textColor="@color/colorText"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_below="@+id/write_text"
+            android:layout_toRightOf="@+id/textView7"
+            android:layout_toEndOf="@+id/textView7" />
+
+        <com.greenfrvr.hashtagview.HashtagView
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/hashtags2"
+            style="@style/HashtagView"
+            app:rowMode="stretch"
+            app:selectionMode="true"
+            app:tagBackground="@drawable/item_bg_1"
+            app:tagTextColor="@color/colorText"
+            android:layout_marginTop="19dp"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/register"
+                android:text="정당 만들기"
+                android:textColor="@color/colorTextPrimary"
+                android:background="@drawable/item_bg_3"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="28dp"
+                android:layout_weight="0.13" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:weightSum="1"
+            android:id="@+id/linearLayout2"
+            android:layout_below="@+id/textView5"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="19dp">
+
+            <Button
+                android:text="내 정당 색 정하기"
+                android:textColor="@color/colorTextPrimary"
+                android:background="@drawable/item_bg_3"
+                android:textSize="25dp"
+                android:layout_marginRight="10dp"
+
+                android:id="@+id/btn_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_below="@+id/just_idea"
+                android:layout_weight="0.13" />
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/selected_color"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/item_bg_2" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

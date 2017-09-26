@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/var1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorText"
+        />
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/var1"
+        android:id="@+id/post_title"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:textSize="20dp"
+        android:maxLines="1"
+        tools:text="My First Post" />
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/post_title"
+        android:id="@+id/var2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorText"
+        />
+
+    <TextView
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/var2"
+        android:id="@+id/post_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="이 곳은 바디 부분입니다 알아 들으시겠습니까? 바디라니깐요 어이가 없네;;;" />
+
+</LinearLayout>

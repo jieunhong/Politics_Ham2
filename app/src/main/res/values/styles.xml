@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:actionBarSize">100dp</item>
+        <item name="actionBarSize">100dp</item>
+        <item name="android:windowTitleSize">100dp</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="windowActionBar">true</item>
+    </style>
+
+
+    <style name="tab_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+
+    <style name="HashtagView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+
+    </style>
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="colorControlNormal">@color/colorTextMake</item>
+    </style>
+    <style name="EditTextStyle2" parent="Widget.AppCompat.EditText">
+        <item name="colorControlNormal">@color/colorTextDetail</item>
+    </style>
+
+
+</resources>

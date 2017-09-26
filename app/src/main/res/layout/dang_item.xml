@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_myjungdang"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:weightSum="1"
+            android:id="@+id/relativeLayout2">
+            <ImageView
+                android:id="@+id/myjungdang_color"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/item_bg_dang" />
+
+            <TextView
+                android:id="@+id/mydang_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="스마틴당"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textStyle="bold"
+                android:layout_alignTop="@+id/myjungdang_color"
+                android:layout_alignLeft="@+id/my_jungdang_bar"
+                android:layout_alignStart="@+id/my_jungdang_bar"
+                android:layout_alignRight="@+id/my_jungdang_bar"
+                android:layout_alignEnd="@+id/my_jungdang_bar" />
+
+            <ImageView
+                android:id="@+id/my_jungdang_bar"
+                android:layout_width="200dp"
+                android:layout_height="3dp"
+                android:background="@color/colorText"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/myjungdang_color"
+                android:layout_toEndOf="@+id/myjungdang_color"
+                android:layout_marginLeft="26dp"
+                android:layout_marginStart="26dp" />
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/myjungdang_color"
+                android:layout_alignRight="@+id/my_jungdang_bar"
+                android:layout_alignEnd="@+id/my_jungdang_bar"
+                android:layout_alignLeft="@+id/myjungdang_color"
+                android:layout_alignStart="@+id/myjungdang_color">
+
+                <TextView
+                    android:id="@+id/mydang_people"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/people"
+                    android:layout_alignBottom="@+id/people"
+                    android:layout_centerHorizontal="true"
+                    android:text="3,800"
+                    android:textColor="@color/colorText" />
+
+                <TextView
+                    android:id="@+id/people"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/myjungdang_color"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_toRightOf="@+id/mydang_people"
+                    android:text="PEOPLE"
+                    android:textColor="@color/colorText" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginBottom="-5dp"
+                android:id="@+id/mydang_ideology"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="서민을 위하는 나라"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:layout_above="@+id/linearLayout"
+                android:layout_alignRight="@+id/linearLayout"
+                android:layout_alignEnd="@+id/linearLayout"
+                android:layout_alignLeft="@+id/my_jungdang_bar"
+                android:layout_alignStart="@+id/my_jungdang_bar" />
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+</RelativeLayout>

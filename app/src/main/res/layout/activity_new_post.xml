@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorTextPrimary"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="back" />
+
+    <RelativeLayout
+        android:focusable="true"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/back">
+
+        <EditText
+
+            android:id="@+id/field_body"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@+id/field_title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/item_bg_5"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:scrollHorizontally="false" />
+
+        <TextView
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:id="@+id/text_plaza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="광장 글 쓰기"
+            android:textSize="30dp"/>
+    <ImageView
+        android:layout_below="@id/text_plaza"
+        android:id="@+id/var1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorText"
+        />
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/var1"
+        android:id="@+id/title_text"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:background="@drawable/item_bg_4"
+        android:gravity="center_vertical"
+        android:text="제 목"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="15dp" />
+    <EditText
+        android:background="@null"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="15dp"
+        android:id="@+id/field_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="제목을 입력해주세요"
+        android:maxLines="1"
+        android:layout_alignBottom="@+id/var2"
+        android:layout_toRightOf="@+id/title_text" />
+
+    <ImageView
+        android:layout_below="@id/title_text"
+        android:id="@+id/var2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorText"
+        android:layout_marginTop="10dp" />
+        <ImageView
+            android:layout_below="@id/field_body"
+            android:id="@+id/var3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorText"
+            android:layout_marginTop="10dp" />
+
+
+        <Button
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="25dp"
+            android:text="게시하기"
+        android:id="@+id/fab_submit_post"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+            android:background="@drawable/item_bg_4"
+            android:layout_marginTop="23dp"
+            android:layout_below="@+id/field_body"
+            android:layout_centerHorizontal="true" />
+
+
+
+
+
+        </RelativeLayout>
+</RelativeLayout>

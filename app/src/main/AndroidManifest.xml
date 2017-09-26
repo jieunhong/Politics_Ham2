@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="droidmentor.PoliticTeens_Client">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:layout_height="@dimen/actionBarSize"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
+
+        <activity android:name=".SplashActivity"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity android:name=".FacebookLoginActivity">
+        </activity>
+
+        <activity android:name="droidmentor.PoliticTeens_Client.MainActivity"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <uses-permission android:name="android.permission.INTERNET"/>
+
+        <activity android:name="BaseActivity2"/>
+        <activity android:name="NewPostActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="PostDetailActivity"/>
+
+        <activity android:name=".NewJungPostActivity"
+            android:windowSoftInputMode="adjustPan"/>/>
+        <activity android:name=".JungPostDetailActivity"/>
+        <activity android:name=".SearchActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".MagazinePostDetailActivity"/>
+        <activity android:name=".JungConPostDetailActivity"/>
+
+    </application>
+
+
+</manifest>

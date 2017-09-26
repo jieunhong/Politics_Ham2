@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/search_jungdang_layout"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackground"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="115dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/text_myjungdang"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/my_jungdang"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:text="내 정당"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="15dp"
+
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:text="정당 탐색"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/image_myjungdang"
+            android:layout_width="fill_parent"
+            android:layout_height="7dp"
+            android:layout_below="@id/text_myjungdang"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@color/colorSelect"
+
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_myjungdang"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/colorText"
+            android:text="정당에 가입되어 있지 않으신가요?" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorText"
+            android:text="함께 의견을 나누고 소통할 수 있는 정당에 가입해보세요!" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textView2"
+            android:gravity="center_horizontal"
+            android:id="@+id/search"
+            >
+
+            <EditText
+                android:id="@+id/search_dang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:textAlignment="center"
+                android:textColorHint="#bebebe"
+                android:textSize="18dp"
+                android:hint="당신의 정당을 검색하세요"
+                android:textColor="@color/colorText"
+                android:background="@drawable/search_back"/>
+            <ImageButton
+                android:id="@+id/go_search"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                />
+
+        </LinearLayout>
+        <ImageView
+            android:layout_margin="20dp"
+            android:layout_width="350dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorText"
+            android:layout_below="@id/search"
+            android:id="@+id/seach_dang_bar"
+            />
+        <TextView
+            android:id="@+id/hot_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seach_dang_bar"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorText"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="HOT정당" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            tools:listitem="@layout/dang_item"
+            android:layout_below="@id/hot_title"
+            android:id="@+id/hot_jungdang"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:layout_weight="1.09"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="12dp"
+
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

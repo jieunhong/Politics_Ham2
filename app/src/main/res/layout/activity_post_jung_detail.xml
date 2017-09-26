@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <Button
+        android:id="@+id/back"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="back"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <RelativeLayout
+        android:layout_margin="20dp"
+        android:layout_below="@id/back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout4">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="["
+        android:textSize="30dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/textView4" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/category"
+        android:textSize="30dp"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4" />
+    <TextView
+
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="]"
+        android:textSize="30dp"
+        android:id="@+id/textView3"
+        android:layout_toRightOf="@+id/category"
+        android:layout_toEndOf="@+id/category" />
+
+
+        <RelativeLayout
+            android:layout_toRightOf="@id/textView3"
+            android:id="@+id/post_author_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <include
+            layout="@layout/include_post_author_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <include
+            android:layout_marginTop="10dp"
+            android:id="@+id/post_text_layout"
+            layout="@layout/include_post_text"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@+id/post_author_layout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_below="@id/post_text_layout"
+            android:id="@+id/var3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorText"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/comment_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1.0"
+            android:layout_below="@+id/var3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <EditText
+                style="@style/EditTextStyle2"
+                android:id="@+id/field_comment_text"
+                android:layout_width="0dp"
+                android:layout_weight="0.70"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                />
+
+            <Button
+                android:id="@+id/button_post_comment"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:textColor="@color/colorTextDetail"
+                android:text="COMMENT" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_comments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp"
+            android:layout_below="@+id/comment_form"
+            tools:listitem="@layout/item_comment" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
