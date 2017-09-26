@@ -45,6 +45,7 @@ public class PlazaFragment extends Fragment {
 
     public PlazaFragment() {}
 
+
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container,
                               Bundle savedInstanceState) {
@@ -61,7 +62,7 @@ public class PlazaFragment extends Fragment {
         mRecycler = (RecyclerView) rootView.findViewById(R.id.plaza_list);
         mRecycler.setHasFixedSize(true);
 
-        postsQuery = getQuery2(mDatabase);
+        postsQuery = getQuery1(mDatabase);
 
 
 
@@ -77,9 +78,38 @@ public class PlazaFragment extends Fragment {
         mManager.setReverseLayout(true);
         mManager.setStackFromEnd(true);
         mRecycler.setLayoutManager(mManager);
-
+        mRecycler.setAdapter(setAdapter_own(mAdapter));
         // Set up FirebaseRecyclerAdapter with the Query
-        mAdapter = new FirebaseRecyclerAdapter<Post, PostViewHolder>(Post.class, R.layout.plaza_item_post,
+
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        hot_list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                postsQuery = getQuery2(mDatabase);
+                mRecycler.setAdapter(setAdapter_own(mAdapter));
+                Log.d("ㅅㅂ 핫","ㄴㅇ");
+                Log.d("ㅅㅂ 핫","ㄴㅇ");
+            }
+        });
+        new_list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                postsQuery = getQuery1(mDatabase);
+                mRecycler.setAdapter(setAdapter_own(mAdapter));
+                Log.d("ㅅㅂ 뉴","ㄴㅇ");
+                Log.d("ㅅㅂ 뉴","ㄴㅇ");
+            }
+        });
+    }
+
+    public FirebaseRecyclerAdapter<Post, PostViewHolder> setAdapter_own(FirebaseRecyclerAdapter<Post, PostViewHolder> adapter){
+        adapter = new FirebaseRecyclerAdapter<Post, PostViewHolder>(Post.class, R.layout.plaza_item_post,
                 PostViewHolder.class, postsQuery) {
             @Override
             protected void populateViewHolder(final PostViewHolder viewHolder, final Post model, final int position) {
@@ -119,27 +149,7 @@ public class PlazaFragment extends Fragment {
                 });
             }
         };
-        mRecycler.setAdapter(mAdapter);
-
-        hot_list.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                postsQuery = getQuery2(mDatabase);
-                Log.d("ㅅㅂ 핫","ㄴㅇ");
-                mAdapter.notifyDataSetChanged();
-                Log.d("ㅅㅂ 핫","ㄴㅇ");
-            }
-        });
-        new_list.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                postsQuery = getQuery1(mDatabase);
-                Log.d("ㅅㅂ 뉴","ㄴㅇ");
-                mAdapter.notifyDataSetChanged();
-                Log.d("ㅅㅂ 핫","ㄴㅇ");
-            }
-        });
-
+        return adapter;
     }
 
     // [START post_stars_transaction]
